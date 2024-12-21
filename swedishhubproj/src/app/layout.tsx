@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,39 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="SH.svg" type="image/svg+xml" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Navbar Amarilla */}
+        <nav className="bg-yellow-500 p-4">
+          <div className="container mx-auto flex justify-end">
+            <button className="text-black mx-2">Español</button>
+          </div>
+        </nav>
+
+        {/* Navbar Azul */}
+        <nav className="bg-blue-500 p-4">
+          <div className="container mx-auto flex justify-between">
+            <div className="text-white">Logo</div>
+            <div className="flex space-x-4">
+              <Link href="/blog">
+                <a className="text-white">Blog</a>
+              </Link>
+              <Link href="/learnguide">
+                <a className="text-white">Learning Guide</a>
+              </Link>
+              <Link href="/myroad">
+                <a className="text-white">My Road</a>
+              </Link>
+              <Link href="/resources">
+                <a className="text-white">Resources</a>
+              </Link>
+            </div>
+          </div>
+        </nav>
+
+        {/* Main content */}
+        <main className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+          {children}
+        </main>
       </body>
     </html>
   );
