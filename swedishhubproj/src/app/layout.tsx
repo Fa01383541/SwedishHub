@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    (<html lang="en">
       <head>
         <link rel="icon" href="SH.svg" type="image/svg+xml" />
       </head>
@@ -41,17 +41,17 @@ export default function RootLayout({
           <div className="container mx-auto flex justify-between">
             <div className="text-white">Logo</div>
             <div className="flex space-x-4">
-              <Link href="/blog">
-                <a className="text-white">Blog</a>
+              <Link href="/blog" className="text-white">
+                Blog
               </Link>
-              <Link href="/learnguide">
-                <a className="text-white">Learning Guide</a>
+              <Link href="/learnguide" className="text-white">
+                Learning Guide
               </Link>
-              <Link href="/myroad">
-                <a className="text-white">My Road</a>
+              <Link href="/myroad" className="text-white">
+                My Road
               </Link>
-              <Link href="/resources">
-                <a className="text-white">Resources</a>
+              <Link href="/resources" className="text-white">
+                Resources
               </Link>
             </div>
           </div>
@@ -62,6 +62,6 @@ export default function RootLayout({
           {children}
         </main>
       </body>
-    </html>
+    </html>)
   );
 }
