@@ -14,9 +14,10 @@ export default function Home() {
         <div className="container mx-auto flex justify-between">
           <div className="text-white">Logo</div>
           <div className="flex space-x-4">
-            <a href="#" className="text-white">Home</a>
-            <a href="#" className="text-white">About</a>
-            <a href="#" className="text-white">Contact</a>
+            <a href="/bluenavbar/blog" className="text-white">Blog</a>
+            <a href="/bluenavbar/learnguide" className="text-white">Learning Guide </a>
+            <a href="/bluenavbar/myroad" className="text-white">My Road</a>
+            <a href="/bluenavbar/resources" className="text-white">Resources</a>
           </div>
         </div>
       </nav>
