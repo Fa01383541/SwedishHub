@@ -12,7 +12,7 @@ export default function Navbar(){
         <nav className="container mx-auto">
           <ul className="flex justify-end text-sm text-white">
             <li>
-              <Link href="#" className="hover:underline">Español 
+              <Link href="#" className="hover:underline">Español a
               </Link>
             </li>
           </ul>
